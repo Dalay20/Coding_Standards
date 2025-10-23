@@ -1,5 +1,6 @@
 """Sistema de gestión de calificaciones de estudiantes."""
 
+
 class Student:
     """Representa a un estudiante con sus calificaciones, promedio y estado."""
 
@@ -128,8 +129,8 @@ def main():
     student_a.add_grade(95)
     student_a.add_grade(88.5)
     student_a.add_grade(76)
-    student_a.add_grade(-5)      # inválido
-    student_a.add_grade("A+")    # inválido
+    student_a.add_grade(-5)  # inválido
+    student_a.add_grade("A+")  # inválido
 
     # Eliminar calificaciones
     student_a.remove_grade_by_index(2)
