@@ -1,12 +1,19 @@
-class student:
+"""Student grade management system."""
+
+
+class Student:
+    """Represents a student and their grades."""
+
     def __init__(self, student_id, name):
+        """Initialize a student with ID, name, and empty grades list."""
         self.id = student_id
         self.name = name
         self.grades = []
         self.is_passed = False
         self.honor = None
 
-    def add_grades(self, grade): 
+    def add_grades(self, grade):
+        """Add a numeric grade to the student record."""
         if isinstance(grade, (int, float)):
             self.grades.append(grade)
         else:
@@ -41,14 +48,17 @@ class student:
         print(f"Average: {avg:.2f}")
         print(f"Honor: {'Yes' if self.honor else 'No'}")
 
-    def startrun():
-        a = student("x", "")
-        a.addGrades(100)
-        a.addGrades("Fifty")  # broken
-        a.calcaverage()
-        a.checkHonor()
-        a.deleteGrade(5)  # IndexError
-        a.report()
+
+def start_run():
+    """Test the Student class."""
+    a = Student("x", "Alice")
+    a.add_grades(100)
+    a.add_grades(50)
+    a.calc_average()
+    a.check_honor()
+    a.delete_grade(1)
+    a.report()
 
 
-startrun()
+if __name__ == "__main__":
+    start_run()
